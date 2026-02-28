@@ -21,7 +21,7 @@ public class AdminController {
     @GetMapping("/panel")
     public String panelAdmin(Model model) {
         model.addAttribute("productos", productoServiceJPA.listarConJPA());
-        model.addAttribute("nuevoProducto", new Producto());
+        model.addAttribute("nuevoProducto", new Producto(null, 0));
         return "admin"; // admin.html
     }
 

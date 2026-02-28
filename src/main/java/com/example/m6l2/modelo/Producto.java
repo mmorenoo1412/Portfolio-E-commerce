@@ -2,52 +2,48 @@ package com.example.m6l2.modelo;
 
 import jakarta.persistence.*;
 
-
 @Entity
-@Table(name = "productos")
 public class Producto {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private  int id;
-	
-	private String nombre;
-	private double precio;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public Producto () {}
-	public Producto (String nombre, double precio) {
-	this.nombre = nombre;
-    this.precio = precio;
-}
+    private String nombre;
+    private double precio;
 
-	public Producto(int id, String nombre, double precio) {
-	    this.id = id;
-	  	this.nombre=nombre;
-	  	this.precio=precio;
-	
-}
+    // Constructors
+    public Producto(int i, String string, double d) {}
+    
+    public Producto(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+    
+    public Producto () {}
 
-public int getId() {
-    return id;
-}
+    // Getters & Setters
+    public Long getId() {
+        return id;
+    }
 
-public void setId(int id) {
-    this.id = id;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public String getNombre() {
-    return nombre;
-}
+    public String getNombre() {
+        return nombre;
+    }
 
-public void setNombre(String nombre) {
-    this.nombre = nombre;
-}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-public double getPrecio() {
-    return precio;
-}
+    public double getPrecio() {
+        return precio;
+    }
 
-public void setPrecio(double precio) {
-    this.precio = precio;
-	}
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 }

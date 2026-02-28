@@ -1,6 +1,7 @@
 package com.example.m6l2.controller;
 
 import com.example.m6l2.dao.ProductoDAOJdbc;
+import com.example.m6l2.repository.ProductoRepository;
 import com.example.m6l2.servicio.ProductoServiceImpl;
 import com.example.m6l2.servicio.ProductoServiceJPA;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,15 +31,16 @@ public class ProductoController {
         return "productos"; // main productos.html page
     }
 
-    @GetMapping("productos/jdbc")
-    public String listarJdbc(Model model) {
-        model.addAttribute("productos", productoDAOJdbc.listar());
-        return "productos/jdbc";
-    }
+   // @GetMapping("productos")
+   // public String listarJdbc(Model model) {
+   //     model.addAttribute("productos", productoDAOJdbc.listar());
+   //     return "productos";
+   // }
 
-    @GetMapping("productos/jpa")
-    public String listarJPA(Model model) {
-        model.addAttribute("productos", productoServiceJPA.listarConJPA());
-        return "productos/jpa";
-    }
+   // @GetMapping("productos")
+   // public String listarJPA(Model model) {
+     //  model.addAttribute("productos", productoServiceJPA.listarConJPA());
+      // return "productos";
+    //}
+    
 }

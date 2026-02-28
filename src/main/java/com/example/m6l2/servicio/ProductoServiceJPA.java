@@ -34,5 +34,10 @@ public class ProductoServiceJPA {
 		
 	}
 	
+	public Producto buscarPorId(Integer id) {
+	    return repository.findById(id)
+	            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+	}
+	
 	
 }
